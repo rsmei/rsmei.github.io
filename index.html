@@ -159,25 +159,38 @@
           <div class="content has-text-justified">
             <p>
             <ol>
-              <li><strong> Moving from home position to just above the peg </strong> (P1 → P1.5 → P2 → P2.5 → P3): </li>
-              <!-- </br> -->
+              <li><strong> Moving from home position to just above the peg </strong> (P1 → P1.5 → P2 → P2.5) : </li>
               This task involves moving the robot from home position, Point1, to the point just above the hole, Point3.
               Although directly moving the robot from Point1 to Point3 is fast and effecient, we added several
               intermediate points to prevent the robot from moving out of its task space.
-              <li><strong>Peg Insertion: </strong></li>
-              (Point3 → Point4) </br>
+
+              <li><strong>Peg Insertion </strong> (P2.5 → P3 → P4 → P2.5) : </li>
               Insert the robot’s peg into the hole so that the peg is inserted two inches. A red line on the peg that
               indicates the needed depth. The peg stays in the hole for at least 0.5 seconds to measure if the peg went
               deep enough into the hole. Then have the robot pull its peg out of the hole.
-              <li><strong>Moving from peg to zigzag: </strong></li>
-              (Point4 → Point2.5 → Point4.5 → Point5) </br>
+
+              <li><strong>Moving from peg to zigzag </strong> (P2.5 → P4.5 → P5) : </li>
               Use a number of straight line trajectories to avoid the obstacles in the robot’s path and bring the peg to
               the entrance of the zig-zag. The entrance is on the robot’s left.
-              <li><strong>Zigzag: </strong></li>
-              (Point5 → Point5.5.A → Point5.5.B → Point6.A → Point6.B → Point7) </br>
-              <li><strong>Moving: </strong></li>
-              <li><strong>Press Egg: </strong></li>
-              <li><strong>Back to Home: </strong></li>
+
+              <li><strong>Zigzag </strong> (P5 → P5.5(a) → P5.5(b) → P6(a) → P6(b) → P7) : </li>
+              Navigate the peg through the zig zag. Here we rotated your end effector coordinate frame about
+              Z so that we can weaken your Kp and Kd gains perpendicular to lines through the zig zag. There is another
+              red line on the peg that indicates the depth the peg needs to be inside the zig zag. It is around 20 mm or
+              so. During zigzaging, the peg enters the zig zag and exits the zig zag, without bringing the peg down into
+              the zig zag nor raising the peg before the peg has fully exited the zig zag.
+
+              <li><strong>Moving </strong> (P7 → P7.5(a) → P7.5(b)) : </li>
+              After exiting the zig zag, use a number of straight line trajectories to bring the peg just above the egg.
+
+              <li><strong>Press Egg </strong> (P7.5(b) → P8 → P9 → P10) : </li>
+              Once above the egg, push down on the egg with the peg so that the scale reads in the range 500 to 1000
+              grams. You must press down on the egg in that force range for two seconds.
+
+              <li><strong>Back to Home </strong> (P10 → P1) : </li>
+              Once two seconds have elapsed, gently remove force from the egg and then use some straight line
+              trajectories to move the robot arm to its theta1motor = 0, theta2motor=0, theta3motor=0 position,
+              corresponding to (x,y,z)=(10,0,20)in.
             </ol>
             a. Point 1-2: Move your robot in a straight line to a position of your choice from its
             resting position.
