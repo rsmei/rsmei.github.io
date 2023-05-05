@@ -155,18 +155,40 @@
               with an additional 10 points at the discretion of the instructors for a well-programmed robot.
             </p>
           </div>
-          <h2 class="title is-3">Abstract2</h2>
+          <h2 class="title is-3">Path Details</h2>
           <div class="content has-text-justified">
             <p>
-              This project involves programming a robot to complete a series of tasks within a certain timeframe,
-              including moving in a straight line, inserting a peg into a hole, navigating through a zigzag, pushing
-              down on an egg with a peg to achieve a specific weight, and returning to the resting position. The timing
-              clock will start when the robot starts moving and stop when it completes the trajectory and reaches the
-              final position. The objective is to achieve the fastest time while also producing a well-programmed robot
-              with careful movements and a smart-looking trajectory. The project includes specific guidelines for each
-              step of the trajectory, such as staying in the hole for a certain amount of time and not raising the peg
-              until it has fully exited the zigzag. The project will be graded based on completion of the given steps,
-              with an additional 10 points at the discretion of the instructors for a well-programmed robot.
+            <ol>
+              <li><strong>Moving</strong></li>
+              <li>Peg Insertion</li>
+              <li>Moving</li>
+              <li>Fourth item</li>
+            </ol>
+            a. Point 1-2: Move your robot in a straight line to a position of your choice from its
+            resting position.
+            b. Point 2-3: Using a number of straight line trajectories, move the robot’s peg just
+            above the hole that is directly to the left of the robot.
+            c. Point 3-4: Insert the robot’s peg into the hole so that the peg is inserted two inches.
+            A red line on the peg that indicates the needed depth. You must stay in the hole for
+            at least 0.5 seconds so that we can measure if the peg went deep enough into the
+            hole. Then have the robot pull its peg out of the hole.
+            d. Point 4-5: Use a number of straight line trajectories to avoid the obstacles in the
+            robot’s path and bring the peg to the entrance of the zig-zag. The entrance is on the
+            robot’s left.
+            e. Point 5-7: Navigate the peg through the zig zag. Here you may want to rotate your
+            end effector coordinate frame about Z so that you can weaken your Kp and Kd gains
+            perpendicular to lines through the zig zag. There is another red line on the peg that
+            indicates the depth the peg needs to be inside the zig zag. It is around 20 mm or so.
+            You also must enter the zig zag and exit the zig zag. You cannot bring the peg down
+            into the zig zag nor can you raise the peg before the peg has fully exited the zig zag.
+            f. Point 7-8: After exiting the zig zag, use a number of straight line trajectories to
+            bring the peg just above the egg.
+            g. Point 8-9: Once above the egg, push down on the egg with the peg so that the scale
+            reads in the range 500 to 1000 grams. You must press down on the egg in that force
+            range for two seconds.
+            h. Point 9-10: Once two seconds have elapsed, gently remove force from the egg and
+            then use some straight line trajectories to move the robot arm to its theta1motor = 0,
+            theta2motor=0, theta3motor=0 position, corresponding to (x,y,z)=(10,0,20)in.
             </p>
           </div>
         </div>
