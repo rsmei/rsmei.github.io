@@ -204,13 +204,14 @@
           <h2 class="title is-3">Control Strategy</h2>
           <div class="content has-text-justified">
             <p>
-              In this project, we first defined waypoints of each step. We used piecewise straight line trajectories
-              with constant velocity to move from one waypoint to another. For the moving trajectories in free space
-              , the robot moves in a faster speed (0.15 m/s in the Finesse, 0.5 m/s in Speedy) with higher Kp and Kd
-              gains. For the trajectories where the robot might be in contact with obstacles, it moves in a slower speed
-              (0.08 m/s for both Finesse and Speedy) with a softer Kp and Kd gains in the direction of possible hard
-              contact. We also implemented gravity compensation during the egg pressing task to achieve the desired
-              force pushing on the egg (500 to 1000 grams). The robot traversed all waypoints to complete its mission.
+              In this project, we first defined waypoints for each step. We utilized piecewise straight line
+              trajectories with a constant velocity to move from one waypoint to another. When the robot moved through
+              free space, it accelerated to a higher speed (0.15 m/s in Finesse, 0.5 m/s in Speedy) using higher Kp and
+              Kd gains. However, for trajectories where the robot could encounter obstacles, it moved at a slower speed
+              (0.08 m/s for both Finesse and Speedy) with softer Kp and Kd gains in the direction of potential hard
+              contact. Additionally, we implemented gravity compensation during the egg pressing task to achieve the
+              desired force exerted on the egg (500 to 1000 grams). The robot successfully traversed all waypoints to
+              complete its mission.
             </p>
           </div>
         </div>
