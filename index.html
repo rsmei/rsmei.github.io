@@ -214,6 +214,22 @@
               complete its mission.
             </p>
           </div>
+          <h2 class="title is-3">Difficult/Challenging Parts</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this project, we discovered that precision and velocity are crucial when pressing the top of the egg.
+              Accidentally pressing on the side of the egg or applying excessive contact velocity can result in cracking
+              the egg or causing the scale to move.
+
+              In Lab4, we developed a "line" trajectory function to enable the robot to move repeatedly from point A to
+              point B. To enhance the functionality of this function for multiple waypoints, it is necessary to define a
+              suitable structure called "points" that contains sufficient information. Additionally, the "line" function
+              should adjust the Kp and Kd gains based on the desired velocity and impedance gain (mode), which are
+              members of the "points" structure. Instead of defining separate line functions with different impedance
+              gains and waypoints, we successfully devised a single "line" function that can be applied to multiple
+              tasks using a single "points" array consisting of 20 waypoints.
+            </p>
+          </div>
         </div>
       </div>
     </div>
