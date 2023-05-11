@@ -129,7 +129,7 @@
           <source src="static/videos/IMG_8713.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
-          Finess!
+          Finesse!
         </h2>
         <video poster="" id="tree" autoplay controls muted loop height="100%">
           <!-- Your video here -->
@@ -199,31 +199,18 @@
               trajectories to move the robot arm to its theta1motor = 0, theta2motor=0, theta3motor=0 position,
               corresponding to (x,y,z)=(10,0,20)in.
             </ol>
-            <!-- a. Point 1-2: Move your robot in a straight line to a position of your choice from its
-            resting position.
-            b. Point 2-3: Using a number of straight line trajectories, move the robot’s peg just
-            above the hole that is directly to the left of the robot.
-            c. Point 3-4: Insert the robot’s peg into the hole so that the peg is inserted two inches.
-            A red line on the peg that indicates the needed depth. You must stay in the hole for
-            at least 0.5 seconds so that we can measure if the peg went deep enough into the
-            hole. Then have the robot pull its peg out of the hole.
-            d. Point 4-5: Use a number of straight line trajectories to avoid the obstacles in the
-            robot’s path and bring the peg to the entrance of the zig-zag. The entrance is on the
-            robot’s left.
-            e. Point 5-7: Navigate the peg through the zig zag. Here you may want to rotate your
-            end effector coordinate frame about Z so that you can weaken your Kp and Kd gains
-            perpendicular to lines through the zig zag. There is another red line on the peg that
-            indicates the depth the peg needs to be inside the zig zag. It is around 20 mm or so.
-            You also must enter the zig zag and exit the zig zag. You cannot bring the peg down
-            into the zig zag nor can you raise the peg before the peg has fully exited the zig zag.
-            f. Point 7-8: After exiting the zig zag, use a number of straight line trajectories to
-            bring the peg just above the egg.
-            g. Point 8-9: Once above the egg, push down on the egg with the peg so that the scale
-            reads in the range 500 to 1000 grams. You must press down on the egg in that force
-            range for two seconds.
-            h. Point 9-10: Once two seconds have elapsed, gently remove force from the egg and
-            then use some straight line trajectories to move the robot arm to its theta1motor = 0,
-            theta2motor=0, theta3motor=0 position, corresponding to (x,y,z)=(10,0,20)in. -->
+            </p>
+          </div>
+          <h2 class="title is-3">Control Strategy</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this project, we first defined waypoints of each step. We used piecewise straight line trajectories
+              with constant velocity to move from one waypoint to another. For the moving trajectories in free space
+              , the robot moves in a faster speed (0.15 m/s in the Finesse, 0.5 m/s in Speedy) with higher Kp and Kd
+              gains. For the trajectories where the robot might be in contact with obstacles, it moves in a slower speed
+              (0.08 m/s for both Finesse and Speedy) with a softer Kp and Kd gains in the direction of possible hard
+              contact. We also implemented gravity compensation during the egg pressing task to achieve the desired
+              force pushing on the egg (500 to 1000 grams). The robot traversed all waypoints to complete its mission.
             </p>
           </div>
         </div>
